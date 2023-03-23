@@ -33,10 +33,11 @@ public class EmployeeController {
     }
 
 
-    @GetMapping("/pagination/{pageNo}/{pageSize}")
+    @GetMapping("/pagination/{pageNo}/{pageSize}/{sortBy}")
     public Stream<Employee> getPaginatedEmployee(@PathVariable int pageNo,
-                                                 @PathVariable int pageSize) {
-        return employeeServiceClass.findAll(pageNo,pageSize);
+                                                 @PathVariable int pageSize,
+                                                 @PathVariable String sortBy) {
+        return employeeServiceClass.findAll(pageNo,pageSize,sortBy);
     }
 
 

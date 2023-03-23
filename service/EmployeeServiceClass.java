@@ -7,6 +7,6 @@ import java.util.stream.Stream;
 @SuppressWarnings("ALL")
 public interface EmployeeServiceClass {
 
-    Stream<Employee> findAll(int pageNo, int pageSize);
+    Stream<Employee> findAll(int pageNo, int pageSize, String sorBy);
 
 }
