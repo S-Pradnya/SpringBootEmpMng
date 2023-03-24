@@ -22,7 +22,7 @@ public class EmployeeService implements EmployeeServiceClass {
     @Override
     public Stream<Employee> findAll(int pageNo, int pageSize,String sortBy) {
 
-        Pageable pageable = PageRequest.of(0, 10,Sort.by("id").descending());
+        Pageable pageable = PageRequest.of(0, 5,Sort.by("createdDate").descending());
         Page<Employee> pagedResult = employeeRepository.findAll(pageable);
         return pagedResult.stream();
 
