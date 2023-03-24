@@ -37,6 +37,10 @@ public class Employee {
 
     @Column(name = "mobile")
     private String mobile;
+
+    //@CreationTimestamp
+    //@Column(name="created_date")
+    //private Date createdDate;
     @Column(name = "dept_id")
     private Long deptId;
 

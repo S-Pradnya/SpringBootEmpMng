@@ -20,12 +20,12 @@ public class EmployeeService implements EmployeeServiceClass {
     private EmployeeRepository employeeRepository;
 
     @Override
-    public Stream<Employee> findAll(int pageNo, int pageSize,  String sortBy) {
+    public Stream<Employee> findAll(int pageNo, int pageSize,String sortBy) {
 
-        Pageable pageable = PageRequest.of(0, 5, Sort.by("id").descending());
-
+        Pageable pageable = PageRequest.of(0, 10,Sort.by("id").descending());
         Page<Employee> pagedResult = employeeRepository.findAll(pageable);
         return pagedResult.stream();
+
 
 
     }
